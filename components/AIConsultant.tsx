@@ -1,8 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Sparkles } from 'lucide-react';
-import { getAIAdvice } from '../geminiService';
-import { ChatMessage } from '../types';
+import { getAIAdvice } from '../geminiService.ts';
+import { ChatMessage } from '../types.ts';
 
 const AIConsultant: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -28,10 +28,15 @@ const AIConsultant: React.FC = () => {
     setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
     setIsLoading(true);
 
-    const advice = await getAIAdvice(userMsg);
-    
-    setMessages(prev => [...prev, { role: 'model', text: advice }]);
-    setIsLoading(false);
+    try {
+      const advice = await getAIAdvice(userMsg);
+      setMessages(prev => [...prev, { role: 'model', text: advice }]);
+    } catch (error) {
+      console.error("Erro no AIConsultant:", error);
+      setMessages(prev => [...prev, { role: 'model', text: "Desculpe, tive um problema técnico. Tente novamente." }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const quickQuestions = [

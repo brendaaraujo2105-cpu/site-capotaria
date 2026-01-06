@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react';
-import { GalleryImage } from '../types';
+import { GalleryImage } from '../types.ts';
 
 const galleryImages: GalleryImage[] = [
-  { id: 1, url: 'https://picsum.photos/id/133/800/800', category: 'Clássicos', title: 'Restauração Vintage' },
-  { id: 2, url: 'https://picsum.photos/id/1071/800/800', category: 'Esportivos', title: 'Cockpit Alcantara' },
-  { id: 3, url: 'https://picsum.photos/id/1072/800/800', category: 'Luxo', title: 'Costura Diamante' },
-  { id: 4, url: 'https://picsum.photos/id/183/800/800', category: 'Luxo', title: 'Couro Bege Premium' },
-  { id: 5, url: 'https://picsum.photos/id/20/800/800', category: 'Modernos', title: 'Personalização Exclusiva' },
-  { id: 6, url: 'https://picsum.photos/id/29/800/800', category: 'Esportivos', title: 'Detalhes em Carbono' },
+  { id: 1, url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800', category: 'Clássicos', title: 'Restauração Vintage' },
+  { id: 2, url: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=800', category: 'Esportivos', title: 'Cockpit Alcantara' },
+  { id: 3, url: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800', category: 'Luxo', title: 'Costura Diamante' },
+  { id: 4, url: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800', category: 'Luxo', title: 'Couro Bege Premium' },
+  { id: 5, url: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800', category: 'Modernos', title: 'Personalização Exclusiva' },
+  { id: 6, url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800', category: 'Esportivos', title: 'Detalhes em Carbono' },
 ];
 
 const categories = ['Todos', 'Luxo', 'Clássicos', 'Esportivos', 'Modernos'];

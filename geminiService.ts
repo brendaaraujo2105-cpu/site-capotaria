@@ -3,8 +3,15 @@ import { GoogleGenAI } from "@google/genai";
 
 // Use the specialized AI model to provide automotive interior advice
 export const getAIAdvice = async (userPrompt: string) => {
+  const apiKey = process.env.API_KEY;
+  
+  if (!apiKey) {
+    console.warn("API Key não encontrada. Certifique-se de que process.env.API_KEY está disponível.");
+    return "O serviço de consultoria IA está temporariamente indisponível (falta de chave). Por favor, entre em contato direto pelo WhatsApp.";
+  }
+
   // Always initialize with the direct reference to process.env.API_KEY
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: apiKey });
   
   try {
     const response = await ai.models.generateContent({

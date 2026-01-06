@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Sofa, ShieldCheck, Paintbrush, CircleUser, Zap } from 'lucide-react';
-import { Service } from '../types';
+import { Service } from '../types.ts';
 
 const services: Service[] = [
   {
@@ -9,28 +9,28 @@ const services: Service[] = [
     title: 'Bancos em Couro',
     description: 'Revestimento completo em couro legítimo ou sintético premium com diversos padrões de costura.',
     icon: <Sofa className="h-8 w-8 text-amber-500" />,
-    imageUrl: 'https://picsum.photos/id/183/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1542362567-b05503f35259?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: '2',
     title: 'Volantes & Manoplas',
     description: 'Restauração de volantes com materiais aderentes para melhor pegada e estética refinada.',
     icon: <CircleUser className="h-8 w-8 text-amber-500" />,
-    imageUrl: 'https://picsum.photos/id/1071/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: '3',
     title: 'Tetos & Colunas',
     description: 'Substituição de forros de teto descolados ou danificados por tecidos originais ou Alcântara.',
     icon: <Paintbrush className="h-8 w-8 text-amber-500" />,
-    imageUrl: 'https://picsum.photos/id/1072/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1621360841013-c7683c659ec6?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: '4',
     title: 'Painéis & Portas',
     description: 'Recuperação de painéis trincados e personalização de forros de porta com iluminação LED.',
     icon: <Zap className="h-8 w-8 text-amber-500" />,
-    imageUrl: 'https://picsum.photos/id/20/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1606016159991-fee4bfa289bb?auto=format&fit=crop&q=80&w=800',
   },
 ];
 
