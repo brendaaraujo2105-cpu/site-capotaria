@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Luxor Capotaria Premium",
+  "description": "Um site moderno e elegante para serviços de capotaria automotiva, apresentando serviços de restauração de interiores, galeria de projetos e um consultor de estilo movido a IA.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
